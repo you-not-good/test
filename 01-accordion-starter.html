@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Component</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion{
+        width: 700px;
+        margin: 100px auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .number,
+      .text{
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .text{
+        color: #000000;
+      }
+
+      .number{
+        color: #868e96;
+      }
+
+      .icon{
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .hiddenBox p{
+        line-height: 1.5;
+        margin-bottom: 24px;
+      }
+
+      .hiddenBox ul{
+        margin-left: 20px;
+        color: #868e96;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      
+      .hiddenBox{
+       grid-column: 2/3;
+       display: none;
+      }
+
+      .item{
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+        padding: 24PX;
+       /* border-top: 8px solid #087f5b; */
+        /*css gird*/
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+      }
+
+      .open{
+        border-top: 8px solid #087f5b;
+      }
+
+      .open .hiddenBox{
+        display: block;
+      }
+
+      .open .number,
+      .open .text{
+        color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="accordion">
+    <div class="item">
+        <P class="number">01</P>
+        <p class="text">Website net worth over time</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="icon"
+        >
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.251-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+        <div class="hiddenBox">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque similique blanditiis quo quisquam! Quam amet ullam modi architecto animi, nesciunt accusamus. Nihil dolores voluptates eveniet, itaque cupiditate reiciendis sit repellendus.</p>
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+    </div>
+    <div class="open">
+    <div class="item">
+        <P class="number">02</P>
+        <p class="text">Incorporate the essential data</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="icon"
+        >
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.251-7.5 7.5-7.5-7.5"
+        />
+       </svg>
+        <div class="hiddenBox">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque similique blanditiis quo quisquam! Quam amet ullam modi architecto animi, nesciunt accusamus. Nihil dolores voluptates eveniet, itaque cupiditate reiciendis sit repellendus.</p>
+           <ul>
+             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+        <P class="number">03</P>
+        <p class="text">Reflect your all-in costs</p>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="icon"
+        >
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m19.5 8.251-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+        <div class="hiddenBox">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque similique blanditiis quo quisquam! Quam amet ullam modi architecto animi, nesciunt accusamus. Nihil dolores voluptates eveniet, itaque cupiditate reiciendis sit repellendus.</p>
+          <ul>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+        </div>
+    </div>
+  </div>
+  </body>
+</html>
